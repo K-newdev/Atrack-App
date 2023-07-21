@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h3>Alumni Tracking System</h3>
+    <form>
+      <h5>Welcome Users!</h5>
+      <div class="error" *ngIf="error != ''">{{error}}</div>
+      <div class="input">
+        <ion-label color="light">Email address</ion-label>
+        <ion-input
+          placeholder="Enter email address"
+          type="text"
+          [(ngModel)]="email"
+          name="email"
+          required
+        >
+        </ion-input>
+      </div>
+      <div class="input">
+        <ion-label color="light">Password</ion-label>
+        <ion-input
+          placeholder="Enter password"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        >
+        </ion-input>
+        <p>Forgot Password?</p>
+      </div>
+      <ion-button expand="full" color="primary" (click)="submitLogin()"
+        >Login</ion-button
+      >
+    </form>
+  </div>
+</ion-content>

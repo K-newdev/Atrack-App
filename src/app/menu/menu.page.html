@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="folder === 'home'">
+    <app-home></app-home>
+  </ng-container>
+  <ng-container *ngIf="folder === 'bookmarks'">
+    <app-bookmarks></app-bookmarks>
+  </ng-container>
+  <ng-container *ngIf="folder === 'forum'">
+    <app-forum></app-forum>
+  </ng-container>
+  <ng-container *ngIf="folder === 'survey'">
+    <app-survey></app-survey>
+  </ng-container>
+  <ng-container *ngIf="folder === 'request'">
+    <app-request></app-request>
+  </ng-container>
+  <ng-container *ngIf="folder === 'inbox'">
+    <app-inbox></app-inbox>
+  </ng-container>
+</ion-content>
